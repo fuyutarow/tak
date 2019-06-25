@@ -6,6 +6,16 @@ WIP
 - Go
 - [konojunya/generate-schedule-calendar](https://github.com/konojunya/generate-schedule-calendar)
 
+
+## Setup
+You need creae 2 files.
+- `config.tml`
+  Declare Google calendarId. e.g. [config.tml](config.tml)
+- `client_secrete.json`
+  Use one generated [Google Cloud Console](https://console.cloud.google.com)
+
+  
+
 ## Usages
 
 - `./tak/start`
