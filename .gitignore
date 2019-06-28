@@ -3,6 +3,7 @@ record.log
 record.archived.log
 schedule.csv
 config.tml
+config.toml
 credentials.json
 client_secret.json
 

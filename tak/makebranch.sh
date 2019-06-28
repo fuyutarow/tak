@@ -1,8 +1,8 @@
 #!/bin/bash
-DIR_BASE=$(cd $(dirname ${0}); pwd)
-TAK_DIR=$DIR_BASE/../.tak
-echo $DIR_BASE
-echo $TAK_DIR
+
+COMMAND_DIR=$(cd $(dirname ${0}); pwd)
+REPO_DIR=$COMMAND_DIR/..
+TAK_DIR=$REPO_DIR/.tak
 
 # open "https://calendar.google.com/calendar/r/settings/createcalendar"
 
@@ -26,8 +26,8 @@ echo "$Config"
 read -r -p "Are you sure? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
-    echo "$Config" > $TAK_DIR/$BranchName.toml
-    echo $BranchName >> $TAK_DIR/branch_list.csv
+    mkdir -p $TAK_DIR/$BranchName
+    echo "$Config" > $TAK_DIR/$BranchName/config.toml
 else
     :
 fi

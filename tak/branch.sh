@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COMMAND_DIR=$(cd $(dirname ${0}); pwd)
-REPO_DIR=$COMMAND_DIR/../
+REPO_DIR=$COMMAND_DIR/..
 TAK_DIR=$REPO_DIR/.tak
 
 
