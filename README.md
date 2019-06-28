@@ -30,3 +30,9 @@ You need creae 2 files.
   Push to your Google Calendar.
 - `./tak/open`
   Open your Google Calendar.
+- `./tak/makebranch`
+  Make a new branch
+- `./tak/branch`
+  Show list of branche
+- `./tak/checkout`
+  Switch branch
