@@ -28,6 +28,8 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     mkdir -p $TAK_DIR/$BranchName
     echo "$Config" > $TAK_DIR/$BranchName/config.toml
+    touch $TAK_DIR/$BranchName/record.log
+    touch $TAK_DIR/$BranchName/record.archived.log
 else
     :
 fi
