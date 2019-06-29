@@ -1,10 +1,9 @@
 # Tak
 
-WIP
-
 ## Requirements
 - Go
 - [konojunya/generate-schedule-calendar](https://github.com/konojunya/generate-schedule-calendar)
+- [shc](https://github.com/neurobin/shc) `brew install shc` or `apt install shc`
 
 
 ## Setup
@@ -14,7 +13,13 @@ You need creae 2 files.
 - `client_secrete.json`
   Use one generated [Google Cloud Console](https://console.cloud.google.com)
 
-  
+
+## Install
+```sh
+git clone https://github.com/fuyutarow/tak
+shc -f tak/command/main.sh -o /usr/local/bin/tak
+```
+
 
 ## Usages
 
