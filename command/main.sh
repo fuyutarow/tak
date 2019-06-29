@@ -21,35 +21,35 @@ Usage: tak <command> [<args>]
 EOS
 }
 
-for OPT in "$@"; do
-    case "$OPT" in
-        'help'|'-h'|'--help')
-            usage
-            exit 1
-            ;;
-        '--version')
-            echo $VERSION
-            exit 1
-            ;;
-        'start') bash $CommandDir/start.sh ;exit 1;;
-        'commit') bash $CommandDir/commit.sh ;exit 1;;
-        'end') bash $CommandDir/end.sh ;exit 1;;
-        'push') bash $CommandDir/push.sh ;exit 1;;
-        'opne') bash $CommandDir/open.sh ;exit 1;;
-        'branch') bash $CommandDir/branch.sh ;exit 1;;
-        'checkout') bash $CommandDir/checkout.sh ;exit 1;;
-        'edit') bash $CommandDir/edit.sh ;exit 1;;
-        'makebranch') bash $CommandDir/makebranch.sh ;exit 1;;
-        -*)
-            echo "tak: illegal option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
-            exit 1
-            ;;
-        *)
-            if [[ ! -z "$1" ]] && [[ ! "$1" =~ ^-+ ]]; then
-                #param=( ${param[@]} "$1" )
-                param+=( "$1" )
-                shift 1
-            fi
-            ;;
-    esac
-done
+Subcommand=$1
+shift
+case "$Subcommand" in
+    'help'|'-h'|'--help'|'')
+        usage
+        exit 1
+        ;;
+    '--version')
+        echo $VERSION
+        exit 1
+        ;;
+    'start') bash $CommandDir/start.sh ;exit 1;;
+    'commit') bash $CommandDir/commit.sh ;exit 1;;
+    'end') bash $CommandDir/end.sh ;exit 1;;
+    'push') bash $CommandDir/push.sh ;exit 1;;
+    'opne') bash $CommandDir/open.sh ;exit 1;;
+    'branch') bash $CommandDir/branch.sh ;exit 1;;
+    'checkout') bash $CommandDir/checkout.sh $@ ;exit 1;;
+    'edit') bash $CommandDir/edit.sh ;exit 1;;
+    'makebranch') bash $CommandDir/makebranch.sh ;exit 1;;
+    -*)
+        echo "tak: illegal option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
+        exit 1
+        ;;
+    *)
+        if [[ ! -z "$1" ]] && [[ ! "$1" =~ ^-+ ]]; then
+            #param=( ${param[@]} "$1" )
+            param+=( "$1" )
+            shift 1
+        fi
+        ;;
+esac
