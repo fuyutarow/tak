@@ -1,1 +1,3 @@
-vim record.log
+TAK_DIR=$HOME/.tak
+
+vim ${TAK_DIR%/}/record.log

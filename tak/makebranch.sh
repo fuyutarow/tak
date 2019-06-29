@@ -1,8 +1,7 @@
 #!/bin/bash
 
+TAK_DIR=$HOME/.tak
 COMMAND_DIR=$(cd $(dirname ${0}); pwd)
-REPO_DIR=$COMMAND_DIR/..
-TAK_DIR=$REPO_DIR/.tak
 
 # open "https://calendar.google.com/calendar/r/settings/createcalendar"
 
@@ -26,10 +25,11 @@ echo "$Config"
 read -r -p "Are you sure? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
-    mkdir -p $TAK_DIR/$BranchName
-    echo "$Config" > $TAK_DIR/$BranchName/config.toml
-    touch $TAK_DIR/$BranchName/record.log
-    touch $TAK_DIR/$BranchName/record.archived.log
+    BranchDir=${TAK_DIR%/}/branches/$BranchName
+    mkdir -p $BranchDir
+    echo "$Config" > ${BranchDir%/}/config.toml
+    touch ${BranchDir%/}/record.log
+    touch ${BranchDir%/}/record.archived.log
 else
     :
 fi

@@ -1,4 +1,6 @@
 #!/bin/bash
+TAK_DIR=$HOME/.tak
+pushd $TAK_DIR
 go run go/makemigrations.go > schedule.csv
 more schedule.csv
 read -r -p "Are you sure? [y/N] " response
@@ -9,3 +11,4 @@ then
 else
     :
 fi
+popd
