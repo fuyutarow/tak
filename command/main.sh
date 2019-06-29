@@ -31,15 +31,15 @@ for OPT in "$@"; do
             echo $VERSION
             exit 1
             ;;
-        'start') bash $CommandDir/start.sh ;;
-        'commit') bash $CommandDir/commit.sh ;;
-        'end') bash $CommandDir/end.sh ;;
-        'push') bash $CommandDir/push.sh ;;
-        'opne') bash $CommandDir/open.sh ;;
-        'branch') bash $CommandDir/branch.sh ;;
-        'checkout') bash $CommandDir/checkout.sh ;;
-        'edit') bash $CommandDir/edit.sh ;;
-        'makebranch') bash $CommandDir/makebranch.sh ;;
+        'start') bash $CommandDir/start.sh ;exit 1;;
+        'commit') bash $CommandDir/commit.sh ;exit 1;;
+        'end') bash $CommandDir/end.sh ;exit 1;;
+        'push') bash $CommandDir/push.sh ;exit 1;;
+        'opne') bash $CommandDir/open.sh ;exit 1;;
+        'branch') bash $CommandDir/branch.sh ;exit 1;;
+        'checkout') bash $CommandDir/checkout.sh ;exit 1;;
+        'edit') bash $CommandDir/edit.sh ;exit 1;;
+        'makebranch') bash $CommandDir/makebranch.sh ;exit 1;;
         -*)
             echo "tak: illegal option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
             exit 1
@@ -53,8 +53,3 @@ for OPT in "$@"; do
             ;;
     esac
 done
-
-if [ -z $param ]; then
-    usage
-    exit 1
-fi
