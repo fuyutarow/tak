@@ -9,7 +9,9 @@ for f in ${TAK_DIR%/}/branches/*; do
   filename=$(echo "$f" | awk -F'/' '{print $NF}')
   BranchName=${filename%.*}
   if [ $BranchName = $CurrentBranch ]; then
-    echo "* $BranchName"
+    GREEN='\033[0;32m'
+    NC='\033[0m' # No Color]]
+    echo -e "${GREEN}* ${BranchName}${NC}"
   else
     echo "  $BranchName"
   fi
