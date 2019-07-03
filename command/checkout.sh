@@ -16,12 +16,14 @@ TargetBranch="${Filename%.*}"
 SrcDir=$TAK_DIR
 DstDir=${TAK_DIR%/}/branches/${CurrentBranch%/}
 cat $SrcDir/config.tml > $DstDir/config.toml
+cat $SrcDir/record.toml > $DstDir/record.toml
 cat $SrcDir/record.log > $DstDir/record.log
 cat $SrcDir/record.archived.log > $DstDir/record.archived.log
 
 SrcDir=${TAK_DIR%/}/branches/${TargetBranch%/}
 DstDir=$TAK_DIR
 cat $SrcDir/config.toml > $DstDir/config.tml
+cat $SrcDir/record.toml > $DstDir/record.toml
 cat $SrcDir/record.log > $DstDir/record.log
 cat $SrcDir/record.archived.log > $DstDir/record.archived.log
 

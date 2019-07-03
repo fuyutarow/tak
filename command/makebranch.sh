@@ -28,6 +28,7 @@ then
     BranchDir=${TAK_DIR%/}/branches/$BranchName
     mkdir -p $BranchDir
     echo "$Config" > ${BranchDir%/}/config.toml
+    touch ${BranchDir%/}/record.toml
     touch ${BranchDir%/}/record.log
     touch ${BranchDir%/}/record.archived.log
 else

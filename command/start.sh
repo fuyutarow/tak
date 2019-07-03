@@ -1,11 +1,14 @@
 #!/bin/bash
 TAK_DIR=$HOME/.tak
 
-read -p "What: " WHAT
-read -p "Where: " WHERE
+read -p "What: " what
+read -p "Where: " where
 
-echo -e 'start\t'$(date "+%Y\t%m\t%d\t%R") >> ${TAK_DIR%/}/record.log
-echo start at $(date "+%Y-%m-%dT%T")
+# echo -e 'start\t'$(date "+%Y\t%m\t%d\t%R") >> ${TAK_DIR%/}/record.log
 
-echo -e "commit\t$WHAT\t$WHERE" >> ${TAK_DIR%/}/record.log
-echo commit \"$WHAT\" in $WHERE
+
+echo "
+[[commits]]
+start = $(date "+%Y-%m-%dT%R")
+what = $what
+where = $where" >> ${TAK_DIR%/}/record.toml
