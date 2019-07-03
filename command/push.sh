@@ -8,6 +8,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     go run go/push.go
     cat record.log >> record.archived.log
+    cat '' > record.log
 else
     :
 fi
