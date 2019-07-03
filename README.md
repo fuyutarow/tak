@@ -23,21 +23,15 @@ shc -f tak/command/main.sh -o /usr/local/bin/tak
 
 ## Usages
 
-- `./tak/start`
-  Log record when you start task.
-- `./tak/commit`
-  Log record what and where you do.
-- `./tak/end`
-  Log record when you end task.
-- `./tak/edit`
-  Edit record.
-- `./tak/push`
-  Push to your Google Calendar.
-- `./tak/open`
-  Open your Google Calendar.
-- `./tak/makebranch`
-  Make a new branch
-- `./tak/branch`
-  Show list of branche
-- `./tak/checkout`
-  Switch branch
+```sh
+Usage: tak <command> [<args>]
+
+  start       Log record When you start
+  end         Log recored what and when you end task
+  push        Push to your Google Calendar
+  open        Open your Google Calendar with web browser
+  branch      Show list of branches
+  checkout    Switch branch
+  edit        Edit record
+  makebranch  Make a new branch
+```
