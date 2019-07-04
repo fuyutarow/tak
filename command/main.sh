@@ -2,14 +2,15 @@
 
 VERSION="0.0.4"
 
-TAG_DIR=$HOME/.tak
-CommandDir=$TAG_DIR/command
+TAK_DIR=$HOME/.tak
+CommandDir=$TAK_DIR/command
 
 usage() {
 cat<<EOS
 Usage: tak <command> [<args>]
 
-  start       Log record When you start
+  begin       Log record When you start
+  start       Alias to start
   end         Log recored what and when you end task
   push        Push to your Google Calendar
   open        Open your Google Calendar with web browser
@@ -32,7 +33,8 @@ case "$Subcommand" in
         exit 1
         ;;
     'status') bash $CommandDir/status.sh ;exit 1;;
-    'start') bash $CommandDir/start.sh ;exit 1;;
+    'begin') bash $CommandDir/begin.sh ;exit 1;;
+    'start') bash $CommandDir/begin.sh ;exit 1;;
     'end') bash $CommandDir/end.sh ;exit 1;;
     'push') bash $CommandDir/push.sh ;exit 1;;
     'opne') bash $CommandDir/open.sh ;exit 1;;

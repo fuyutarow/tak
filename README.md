@@ -26,7 +26,8 @@ shc -f tak/command/main.sh -o /usr/local/bin/tak
 ```sh
 Usage: tak <command> [<args>]
 
-  start       Log record When you start
+  begin       Log record When you start
+  start       Alias to start
   end         Log recored what and when you end task
   push        Push to your Google Calendar
   open        Open your Google Calendar with web browser

@@ -13,8 +13,8 @@ where = "$Where"
 EOM
 `" >> ${TAK_DIR%/}/record.toml
 
-function setStarttime() {
+function setTime() {
   echo `date +%s` > ${TAK_DIR%/}/timer.txt
 }
 
-setStarttime
+setTime
