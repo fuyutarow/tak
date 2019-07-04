@@ -35,4 +35,7 @@ Usage: tak <command> [<args>]
   checkout    Switch branch
   edit        Edit record
   makebranch  Make a new branch
+  issue       Open GitHub issue with web browser
+  status      Display tak status
+  update      Update tak version
 ```

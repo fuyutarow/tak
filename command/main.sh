@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="0.0.4"
+VERSION="0.0.5"
 
 TAK_DIR=$HOME/.tak
 CommandDir=$TAK_DIR/command
@@ -20,6 +20,7 @@ Usage: tak <command> [<args>]
   makebranch  Make a new branch
   issue       Open GitHub issue with web browser
   status      Display tak status
+  update      Update tak version
 EOS
 }
 
@@ -45,6 +46,7 @@ case "$Subcommand" in
     'edit') bash $CommandDir/edit.sh ;exit 1;;
     'issue') bash $CommandDir/issue.sh ;exit 1;;
     'install') bash $TAK_DIR/scripts/install.sh ;exit 1;;
+    'update') bash $TAK_DIR/scripts/update.sh ;exit 1;;
     'makebranch') bash $CommandDir/makebranch.sh ;exit 1;;
     -*)
         echo "tak: illegal option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
