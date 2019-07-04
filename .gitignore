@@ -1,4 +1,5 @@
 *.sh.x.c
+timer.txt
 record.toml
 record.log
 record.archived.log

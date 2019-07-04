@@ -31,6 +31,7 @@ case "$Subcommand" in
         echo $VERSION
         exit 1
         ;;
+    'status') bash $CommandDir/status.sh ;exit 1;;
     'start') bash $CommandDir/start.sh ;exit 1;;
     'end') bash $CommandDir/end.sh ;exit 1;;
     'push') bash $CommandDir/push.sh ;exit 1;;
