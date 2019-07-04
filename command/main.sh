@@ -19,6 +19,7 @@ Usage: tak <command> [<args>]
   edit        Edit record
   makebranch  Make a new branch
   issue       Open GitHub issue with web browser
+  status      Display tak status
 EOS
 }
 
@@ -43,6 +44,7 @@ case "$Subcommand" in
     'checkout') bash $CommandDir/checkout.sh $@ ;exit 1;;
     'edit') bash $CommandDir/edit.sh ;exit 1;;
     'issue') bash $CommandDir/issue.sh ;exit 1;;
+    'install') bash $TAK_DIR/scripts/install.sh ;exit 1;;
     'makebranch') bash $CommandDir/makebranch.sh ;exit 1;;
     -*)
         echo "tak: illegal option -- '$(echo $1 | sed 's/^-*//')'" 1>&2

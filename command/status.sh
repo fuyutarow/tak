@@ -14,4 +14,5 @@ function getEndtime() {
   echo "elapsed time: ${HH}:${MM}:${SS}"
 }
 
+echo now: `date -R`
 getEndtime
