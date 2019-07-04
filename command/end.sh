@@ -4,7 +4,7 @@ echo "end = $(date "+%Y-%m-%dT%R")" >> ${TAK_DIR%/}/record.toml
 echo end at $(date "+%Y-%m-%dT%T")
 
 function setTime() {
-  echo `date +%s` > ${TAK_DIR%/}/timer.txt
+  echo checkpoint = `date +%s` > ${TAK_DIR%/}/status.toml
 }
 
 setTime

@@ -14,7 +14,7 @@ EOM
 `" >> ${TAK_DIR%/}/record.toml
 
 function setTime() {
-  echo `date +%s` > ${TAK_DIR%/}/timer.txt
+  echo checkpoint = `date +%s` > ${TAK_DIR%/}/status.toml
 }
 
 setTime
