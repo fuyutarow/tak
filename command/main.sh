@@ -10,7 +10,7 @@ cat<<EOS
 Usage: tak <command> [<args>]
 
   start       Log record When you start
-  stop        Log recored what and when you end task
+  stop        Log record what and when you end task
   edit        Edit record
   status      Display tak status
   makebranch  Make a new branch
@@ -42,7 +42,7 @@ case "$Subcommand" in
     'checkout') bash $CommandDir/checkout.sh $@ ;exit 1;;
     'branch') bash $CommandDir/branch.sh ;exit 1;;
     'push') bash $CommandDir/push.sh ;exit 1;;
-    'opne') bash $CommandDir/open.sh ;exit 1;;
+    'open') bash $CommandDir/open.sh ;exit 1;;
     'issue') bash $CommandDir/issue.sh ;exit 1;;
     'install') bash $TAK_DIR/scripts/install.sh ;exit 1;;
     'update') bash $TAK_DIR/scripts/update.sh ;exit 1;;
