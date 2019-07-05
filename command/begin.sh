@@ -13,8 +13,12 @@ where = "$Where"
 EOM
 `" >> ${TAK_DIR%/}/record.toml
 
-function setTime() {
-  echo checkpoint = `date +%s` > ${TAK_DIR%/}/status.toml
-}
 
-setTime
+echo "`cat <<EOM
+[info]
+checkpoint = $(date +%s)
+status = "active"
+what = "$What"
+where = "$Where"
+EOM
+`" > ${TAK_DIR%/}/status.toml
