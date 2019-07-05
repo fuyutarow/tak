@@ -60,3 +60,15 @@ case "$Subcommand" in
         fi
         ;;
 esac
+
+
+while read line; do
+  if [ "$(echo $line | grep = )" ]; then 
+    k=$(echo $line | cut -d'=' -f1 |xargs)
+    v=$(echo $line | cut -d'=' -f2 |xargs)
+    if [ $Subcommand = $k ]; then 
+      eval tak $v
+      exit 1
+    fi
+  fi
+done < $HOME/.takconfig
