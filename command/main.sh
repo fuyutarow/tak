@@ -31,18 +31,18 @@ case "$Subcommand" in
         usage
         exit 1
         ;;
-    '--version')
+    'version'|'-v'|'--version')
         echo $VERSION
         exit 1
         ;;
-    'status') bash $CommandDir/status.sh ;exit 1;;
+    's'|'status') bash $CommandDir/status.sh ;exit 1;;
     'begin') bash $CommandDir/begin.sh ;exit 1;;
     'start') bash $CommandDir/begin.sh ;exit 1;;
     'end') bash $CommandDir/end.sh ;exit 1;;
     'push') bash $CommandDir/push.sh ;exit 1;;
     'opne') bash $CommandDir/open.sh ;exit 1;;
-    'branch') bash $CommandDir/branch.sh ;exit 1;;
-    'checkout') bash $CommandDir/checkout.sh $@ ;exit 1;;
+    'b'|'branch') bash $CommandDir/branch.sh ;exit 1;;
+    'c'|'checkout') bash $CommandDir/checkout.sh $@ ;exit 1;;
     'edit') bash $CommandDir/edit.sh ;exit 1;;
     'issue') bash $CommandDir/issue.sh ;exit 1;;
     'install') bash $TAK_DIR/scripts/install.sh ;exit 1;;
