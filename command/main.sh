@@ -56,7 +56,12 @@ while read line; do
     k=$(echo $line | cut -d'=' -f1 |xargs)
     v=$(echo $line | cut -d'=' -f2 |xargs)
     if [ $Subcommand = $k ]; then 
-      eval tak $v
+      if [[ $v =~ ^\s?! ]]; then
+        shcmd=$(echo $v | cut -d'!' -f2 |xargs)
+      else
+        shcmd="tak $v $@"
+      fi
+      eval $shcmd
       exit 1
     fi
   fi
