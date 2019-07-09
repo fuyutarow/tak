@@ -19,7 +19,8 @@ Usage: tak <command> [<args>]
 
   start       Log record When you start
   stop        Log record what and when you end task
-  edit        Edit record
+  edit        Edit current task
+  amend       Edit record
   status      Display tak status
   makebranch  Make a new branch
   checkout    Switch branch
