@@ -1,7 +1,12 @@
 #!/bin/bash
 TAK_DIR=$HOME/.tak
-echo "end = $(date "+%Y-%m-%dT%R")" >> ${TAK_DIR%/}/record.toml
-echo end at $(date "+%Y-%m-%dT%T")
+
+echo "`cat <<EOM
+stop = $(date "+%Y-%m-%dT%R")
+EOM
+`" >> ${TAK_DIR%/}/current.toml
+cat current.toml >> ${TAK_DIR%/}/record.toml
+echo '' > current.toml
 
 
 echo "`cat <<EOM
@@ -10,3 +15,5 @@ checkpoint = $(date +%s)
 status = "idle"
 EOM
 `" > ${TAK_DIR%/}/status.toml
+
+echo stop at $(date "+%Y-%m-%dT%T")
