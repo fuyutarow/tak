@@ -11,7 +11,8 @@ Usage: tak <command> [<args>]
 
   start       Log record When you start
   stop        Log record what and when you end task
-  edit        Edit record
+  edit        Edit current task
+  amend       Edit record
   status      Display tak status
   makebranch  Make a new branch
   checkout    Switch branch
@@ -37,6 +38,7 @@ case "$Subcommand" in
     'start') bash $CommandDir/start.sh ;exit 1;;
     'stop') bash $CommandDir/stop.sh ;exit 1;;
     'edit') bash $CommandDir/edit.sh ;exit 1;;
+    'amend') bash $CommandDir/amend.sh ;exit 1;;
     'status') bash $CommandDir/status.sh ;exit 1;;
     'makebranch') bash $CommandDir/makebranch.sh ;exit 1;;
     'checkout') bash $CommandDir/checkout.sh $@ ;exit 1;;

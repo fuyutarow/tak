@@ -1,3 +1,3 @@
 TAK_DIR=$HOME/.tak
 
-vim ${TAK_DIR%/}/record.toml
+vim ${TAK_DIR%/}/current.toml
