@@ -1,12 +1,9 @@
 *.sh.x.c
-current.toml
-status.toml
-record.toml
-record.log
-record.archived.log
+ignore/
+status/
+branches/
 schedule.csv
 config.tml
-config.toml
 credentials.json
 client_secret.json
 

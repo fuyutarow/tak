@@ -1,3 +1,5 @@
+#!/bin/bash
 TAK_DIR=$HOME/.tak
+status_commit=${TAK_DIR%/}/status/commit.toml
 
-vim ${TAK_DIR%/}/current.toml
+vim $status_commit
