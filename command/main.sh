@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="0.0.7"
+VERSION="0.0.8"
 
 TAK_DIR=$HOME/.tak
 CommandDir=$TAK_DIR/command
