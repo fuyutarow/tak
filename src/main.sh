@@ -3,7 +3,7 @@
 VERSION="0.0.8"
 
 TAK_DIR=$HOME/.tak
-CommandDir=$TAK_DIR/command
+CommandDir=$TAK_DIR/src
 
 usage() {
 cat<<EOS
