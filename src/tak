@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="0.0.8"
+VERSION="2019.09.07"
 
 TAK_DIR=$HOME/.tak
 CommandDir=$TAK_DIR/src

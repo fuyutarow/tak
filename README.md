@@ -2,14 +2,14 @@
 
 > Tool for keeping track of today's activity.
 
-## Requirements
-- [shc](https://github.com/neurobin/shc) `brew install shc` or `apt install shc`
-
 
 ## Install
 ```sh
-git clone https://github.com/fuyutarow/tak
-shc -f tak/command/main.sh -o /usr/local/bin/tak
+git clone https://github.com/fuyutarow/tak ~/.tak
+(
+    cd ~/.tak
+    make install
+)
 ```
 
 
